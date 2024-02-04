@@ -1,0 +1,93 @@
+// Register.scss
+
+$primary-color: #2c3e50;
+$secondary-color: #ecf0f1;
+$button-color: #3498db;
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  color: $secondary-color;
+  flex-direction: column;
+
+  .registerA {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+
+    img {
+      width: 40px; // Adjusted the logo size
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .registerB {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+
+      input {
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid $secondary-color;
+        border-radius: 4px;
+        background-color: #2c3e50;
+        color: $secondary-color;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+          border-color: $button-color;
+        }
+      }
+
+      button {
+        background-color: $button-color;
+        color: $secondary-color;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: darken($button-color, 10%);
+        }
+      }
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 0.8rem;
+
+      span {
+        color: $button-color;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

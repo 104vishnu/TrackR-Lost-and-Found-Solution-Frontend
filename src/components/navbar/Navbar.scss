@@ -1,0 +1,75 @@
+// Navbar.scss
+
+$primary-color: #2c3e50;
+$secondary-color: #fff;
+$hover-color: #bdc3c7;
+$logo-size: 50px;
+$logo-size-mobile: 30px;
+
+.navbar {
+  background-color: $primary-color;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .nav1 {
+    display: flex;
+    align-items: center;
+
+    .nav1-link {
+      color: $secondary-color;
+      cursor: pointer;
+      margin-right: 1rem; // Add margin between nav1 items
+      
+
+      &:last-child {
+        margin-right: 0; // Remove margin from the last nav1 item
+      }
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  .nav2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem; // Adjust the margin as needed
+
+    img {
+      width: $logo-size;
+
+      @media (max-width: 480px) {
+        width: $logo-size-mobile;
+      }
+    }
+
+    p {
+      text-align: center;
+      color: $secondary-color;
+      margin: 0.25rem 0;
+    }
+  }
+
+  .nav3 {
+    display: flex;
+    align-items: center;
+
+    .nav3-link {
+      color: $secondary-color;
+      cursor: pointer;
+      margin-left: 1rem; // Add margin between nav3 items
+
+      &:first-child {
+        margin-left: 0; // Remove margin from the first nav3 item
+      }
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
